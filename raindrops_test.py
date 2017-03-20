@@ -4,22 +4,25 @@ from raindrops import raindrops
 
 
 class RaindropsTest(unittest.TestCase):
-    def test_1(self):
+    def test_01(self):
         self.assertEqual("1", raindrops(1))
 
-    def test_3(self):
+    def test_02(self):
+        self.assertEqual("2", raindrops(2))
+
+    def test_03(self):
         self.assertEqual("Pling", raindrops(3))
 
-    def test_5(self):
+    def test_05(self):
         self.assertEqual("Plang", raindrops(5))
 
-    def test_7(self):
-        self.assertEqual("Plong", raindrops(7))
-
-    def test_6(self):
+    def test_06(self):
         self.assertEqual("Pling", raindrops(6))
 
-    def test_9(self):
+    def test_07(self):
+        self.assertEqual("Plong", raindrops(7))
+
+    def test_09(self):
         self.assertEqual("Pling", raindrops(9))
 
     def test_10(self):
