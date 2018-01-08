@@ -1,3 +1,5 @@
-*.suo
-**/bin/**/*
-**/obj/**/*
+#from the DotNetKoansSolution project
+DotNetKoansSolution/*.suo
+DotNetKoansSolution/**/bin/**/*
+DotNetKoansSolution/**/obj/**/*
+DotNetKoansSolution/packages/**
