@@ -27,3 +27,18 @@
 *.exe
 *.out
 *.app
+
+#Angular-GettingStarted repo
+Angular-GettingStarted/typings
+Angular-GettingStarted/**/app/**/*.js
+Angular-GettingStarted/**/app/**/*.map
+Angular-GettingStarted/node_modules
+Angular-GettingStarted/jspm_packages
+Angular-GettingStarted/bower_components
+
+Angular-GettingStarted/.vs
+Angular-GettingStarted/**/*.sou
+Angular-GettingStarted/**/*.user
+Angular-GettingStarted/bin
+Angular-GettingStarted/obj
+Angular-GettingStarted/packages
