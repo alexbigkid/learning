@@ -46,95 +46,103 @@ Angular-GettingStarted/packages
 
 #from pyton projets
 # Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+pythonRainDrops/__pycache__/
+pythonRainDrops/*.py[cod]
+pythonRainDrops/*$py.class
 
 # ignore .idea files
-.idea/
+pythonRainDrops/.idea/
 
 # C extensions
-*.so
+pythonRainDrops/*.so
 
 # Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+pythonRainDrops/.Python
+pythonRainDrops/env/
+pythonRainDrops/build/
+pythonRainDrops/develop-eggs/
+pythonRainDrops/dist/
+pythonRainDrops/downloads/
+pythonRainDrops/eggs/
+pythonRainDrops/.eggs/
+pythonRainDrops/lib/
+pythonRainDrops/lib64/
+pythonRainDrops/parts/
+pythonRainDrops/sdist/
+pythonRainDrops/var/
+pythonRainDrops/*.egg-info/
+pythonRainDrops/.installed.cfg
+pythonRainDrops/*.egg
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+pythonRainDrops/*.manifest
+pythonRainDrops/*.spec
 
 # Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+pythonRainDrops/pip-log.txt
+pythonRainDrops/pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
+pythonRainDrops/htmlcov/
+pythonRainDrops/.tox/
+pythonRainDrops/.coverage
+pythonRainDrops/.coverage.*
+pythonRainDrops/.cache
+pythonRainDrops/nosetests.xml
+pythonRainDrops/coverage.xml
+pythonRainDrops/*,cover
+pythonRainDrops/.hypothesis/
 
 # Translations
-*.mo
-*.pot
+pythonRainDrops/*.mo
+pythonRainDrops/*.pot
 
 # Django stuff:
-*.log
-local_settings.py
+pythonRainDrops/*.log
+pythonRainDrops/local_settings.py
 
 # Flask stuff:
-instance/
-.webassets-cache
+pythonRainDrops/instance/
+pythonRainDrops/.webassets-cache
 
 # Scrapy stuff:
-.scrapy
+pythonRainDrops/.scrapy
 
 # Sphinx documentation
-docs/_build/
+pythonRainDrops/docs/_build/
 
 # PyBuilder
-target/
+pythonRainDrops/target/
 
 # IPython Notebook
-.ipynb_checkpoints
+pythonRainDrops/.ipynb_checkpoints
 
 # pyenv
-.python-version
+pythonRainDrops/.python-version
 
 # celery beat schedule file
-celerybeat-schedule
+pythonRainDrops/celerybeat-schedule
 
 # dotenv
-.env
+pythonRainDrops/.env
 
 # virtualenv
-venv/
-ENV/
+pythonRainDrops/venv/
+pythonRainDrops/ENV/
 
 # Spyder project settings
-.spyderproject
+pythonRainDrops/.spyderproject
 
 # Rope project settings
-.ropeproject
+pythonRainDrops/.ropeproject
 
+#
+cSharpKoansSolution/CSharpKoans/bin
+cSharpKoansSolution/CSharpKoans/obj
+cSharpKoansSolution/CSharpKoans.Core/obj
+cSharpKoansSolution/CSharpKoans.Test/bin
+cSharpKoansSolution/CSharpKoans.Test/obj
+cSharpKoansSolution/*.suo
+cSharpKoansSolution/*.user
