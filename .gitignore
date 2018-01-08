@@ -146,3 +146,4 @@ cSharpKoansSolution/CSharpKoans.Test/bin
 cSharpKoansSolution/CSharpKoans.Test/obj
 cSharpKoansSolution/*.suo
 cSharpKoansSolution/*.user
+cSharpKoansSolution/packages/**
