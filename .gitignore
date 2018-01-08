@@ -28,7 +28,9 @@
 *.out
 *.app
 
+#------------------------------------
 #Angular-GettingStarted repo
+#------------------------------------
 Angular-GettingStarted/slides/**
 Angular-GettingStarted/typings
 Angular-GettingStarted/**/app/**/*.js
@@ -44,7 +46,9 @@ Angular-GettingStarted/bin
 Angular-GettingStarted/obj
 Angular-GettingStarted/packages
 
+#------------------------------------
 #from pyton projets
+#------------------------------------
 # Byte-compiled / optimized / DLL files
 pythonRainDrops/__pycache__/
 pythonRainDrops/*.py[cod]
@@ -138,7 +142,9 @@ pythonRainDrops/.spyderproject
 # Rope project settings
 pythonRainDrops/.ropeproject
 
-#
+#------------------------------------
+#from the cSharpKoansSolution project
+#------------------------------------
 cSharpKoansSolution/CSharpKoans/bin
 cSharpKoansSolution/CSharpKoans/obj
 cSharpKoansSolution/CSharpKoans.Core/obj
@@ -147,3 +153,11 @@ cSharpKoansSolution/CSharpKoans.Test/obj
 cSharpKoansSolution/*.suo
 cSharpKoansSolution/*.user
 cSharpKoansSolution/packages/**
+
+#------------------------------------
+#from the DotNetKoansSolution project
+#------------------------------------
+DotNetKoansSolution/*.suo
+DotNetKoansSolution/**/bin/**/*
+DotNetKoansSolution/**/obj/**/*
+DotNetKoansSolution/packages/**
