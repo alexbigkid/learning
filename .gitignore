@@ -157,6 +157,7 @@ cSharpKoansSolution/packages/**
 #------------------------------------
 #from the DotNetKoansSolution project
 #------------------------------------
+#from the DotNetKoansSolution project
 DotNetKoansSolution/*.suo
 DotNetKoansSolution/**/bin/**/*
 DotNetKoansSolution/**/obj/**/*
