@@ -24,7 +24,7 @@ export class ProductDetailComponent implements OnInit {
       description: 'Leaf rake with 48-invh wooden handle.',
       price: 19.95,
       starRating: 3.2,
-      imageUrl: 'http://openclipart.org/image/300px/svg_to_png/26215/ANonymous_Leaf_Rake.png'
+      imageUrl: 'http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
     };
   }
 
