@@ -38,13 +38,14 @@ Angular-GettingStarted/**/app/**/*.map
 Angular-GettingStarted/node_modules
 Angular-GettingStarted/jspm_packages
 Angular-GettingStarted/bower_components
-
 Angular-GettingStarted/.vs
 Angular-GettingStarted/**/*.sou
 Angular-GettingStarted/**/*.user
 Angular-GettingStarted/bin
 Angular-GettingStarted/obj
 Angular-GettingStarted/packages
+Angular-GettingStarted/hello-world/**
+
 
 #------------------------------------
 #from pyton projets
