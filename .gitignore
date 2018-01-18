@@ -29,6 +29,12 @@
 *.app
 
 #------------------------------------
+#angular default directories to ignore
+#------------------------------------
+**/node_modules
+**/dist
+
+#------------------------------------
 #Angular-GettingStarted repo
 #------------------------------------
 Angular-GettingStarted/slides/**
@@ -58,8 +64,6 @@ pythonRainDrops/*$py.class
 # ignore .idea files
 pythonRainDrops/.idea/
 
-# C extensions
-pythonRainDrops/*.so
 
 # Distribution / packaging
 pythonRainDrops/.Python
@@ -97,7 +101,7 @@ pythonRainDrops/.coverage.*
 pythonRainDrops/.cache
 pythonRainDrops/nosetests.xml
 pythonRainDrops/coverage.xml
-pythonRainDrops/*,cover
+pythonRainDrops/*.cover
 pythonRainDrops/.hypothesis/
 
 # Translations
