@@ -33,6 +33,7 @@
 #------------------------------------
 **/node_modules
 **/dist
+**/coverage
 
 #------------------------------------
 #Angular-GettingStarted repo
