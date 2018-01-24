@@ -31,12 +31,17 @@
 #ignore pdfs
 *.pdf
 
+# ignore vscode configuration
+.vscode/
+
 #------------------------------------
 #angular default directories to ignore
 #------------------------------------
 **/node_modules
 **/dist
 **/coverage
+**/app/**/*.js
+**/app/**/*.map
 
 #------------------------------------
 #Angular-GettingStarted repo
