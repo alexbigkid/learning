@@ -28,6 +28,9 @@
 *.out
 *.app
 
+#ignore pdfs
+*.pdf
+
 #------------------------------------
 #angular default directories to ignore
 #------------------------------------
