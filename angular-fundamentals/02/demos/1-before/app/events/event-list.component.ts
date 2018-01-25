@@ -2,23 +2,7 @@ import { Component } from '@angular/core'
 
 @Component ({
     selector: 'event-list',
-    template: `
-    <div>
-        <h1>Upcoming Angular 2 Events</h1>
-        <hr>
-        <div class="well hoverwell thumbnail">
-            <h2>{{event.name}}</h2>
-            <div>Date: {{event.date}}</div>
-            <div>Time: {{event.time}}</div>
-            <div>Price: \${{event.price}}</div>
-            <div>
-                <span>Location: {{event.location.address}}</span>
-                <span>&nbsp;</span>
-                <span>{{event.locatio.city}}, {{event.locatio.country}}</span>
-            </div>
-        </div>
-    </div>
-    `
+    templateUrl: 'app/events/event-list.component.html'
 })
 
 export class EventListComponent {
@@ -30,7 +14,7 @@ export class EventListComponent {
         price: 599.99,
         imageUrl: '/app/assets/images/angularconnect-shield.png',
         location: {
-            address: '1057 DT',
+            address: '10357 DT',
             city: 'London',
             country: 'England'
         }
