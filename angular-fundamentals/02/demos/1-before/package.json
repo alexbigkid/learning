@@ -34,10 +34,11 @@
     "ng2f-server": "^0.2.3"
   },
   "devDependencies": {
-    "concurrently": "3.1.0",
-    "typescript": "2.0.3",
+    "@angular/cli": "^1.6.5",
     "@types/core-js": "0.9.34",
-    "@types/node": "6.0.46"
+    "@types/node": "6.0.46",
+    "concurrently": "3.1.0",
+    "typescript": "2.0.3"
   },
   "repository": {}
 }
