@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <div class="well hoverwell thumbnail">
             <h2>{{event?.name}}</h2>
             <div>Date: {{event?.date}}</div>
-            <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
+            <div [style.color]="event?.time === '8:00 am' ? '#003300' : 'red'" [ngSwitch]="event?.time">
                 Time: {{event?.time}}    
                 <span *ngSwitchCase="'8:00 am'">(Early Start)</span>
                 <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
