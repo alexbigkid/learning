@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 
 import { UserRoutes } from './user.routes';
 import { ProfileComponent } from "./profile.component";
+import { LoginComponent } from "./login.component";
 
 @NgModule({
     imports: [
@@ -11,7 +12,8 @@ import { ProfileComponent } from "./profile.component";
         UserRoutes
     ],
     declarations: [
-        ProfileComponent
+        ProfileComponent,
+        LoginComponent
     ],
     providers: [
 
