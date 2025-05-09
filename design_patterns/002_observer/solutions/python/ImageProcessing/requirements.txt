@@ -1,0 +1,3 @@
+reactivex
+colorama
+pillow

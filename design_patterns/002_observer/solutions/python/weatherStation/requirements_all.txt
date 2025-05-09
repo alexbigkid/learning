@@ -1,0 +1,9 @@
+# Install development dependencies
+wheel
+pip-check
+pip-date
+pip-chill
+pipdeptree
+
+# Install dependencies
+-r requirements_test.txt
