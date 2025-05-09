@@ -66,113 +66,82 @@ Angular-GettingStarted/hello-world/**
 #from pyton projets
 #------------------------------------
 # Byte-compiled / optimized / DLL files
-pythonRainDrops/__pycache__/
-pythonRainDrops/*.py[cod]
-pythonRainDrops/*$py.class
-
-# ignore .idea files
-pythonRainDrops/.idea/
-
-
-# Distribution / packaging
-pythonRainDrops/.Python
-pythonRainDrops/env/
-pythonRainDrops/build/
-pythonRainDrops/develop-eggs/
-pythonRainDrops/dist/
-pythonRainDrops/downloads/
-pythonRainDrops/eggs/
-pythonRainDrops/.eggs/
-pythonRainDrops/lib/
-pythonRainDrops/lib64/
-pythonRainDrops/parts/
-pythonRainDrops/sdist/
-pythonRainDrops/var/
-pythonRainDrops/*.egg-info/
-pythonRainDrops/.installed.cfg
-pythonRainDrops/*.egg
+python/pythonRainDrops/__pycache__/
+python/pythonRainDrops/*.py[cod]
+python/pythonRainDrops/*$py.class
+python/pythonRainDrops/.idea/
+python/pythonRainDrops/.Python
+python/pythonRainDrops/env/
+python/pythonRainDrops/build/
+python/pythonRainDrops/develop-eggs/
+python/pythonRainDrops/dist/
+python/pythonRainDrops/downloads/
+python/pythonRainDrops/eggs/
+python/pythonRainDrops/.eggs/
+python/pythonRainDrops/lib/
+python/pythonRainDrops/lib64/
+python/pythonRainDrops/parts/
+python/pythonRainDrops/sdist/
+python/pythonRainDrops/var/
+python/pythonRainDrops/*.egg-info/
+python/pythonRainDrops/.installed.cfg
+python/pythonRainDrops/*.egg
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
-pythonRainDrops/*.manifest
-pythonRainDrops/*.spec
+python/pythonRainDrops/*.manifest
+python/pythonRainDrops/*.spec
 
 # Installer logs
-pythonRainDrops/pip-log.txt
-pythonRainDrops/pip-delete-this-directory.txt
+python/pythonRainDrops/pip-log.txt
+python/pythonRainDrops/pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-pythonRainDrops/htmlcov/
-pythonRainDrops/.tox/
-pythonRainDrops/.coverage
-pythonRainDrops/.coverage.*
-pythonRainDrops/.cache
-pythonRainDrops/nosetests.xml
-pythonRainDrops/coverage.xml
-pythonRainDrops/*.cover
-pythonRainDrops/.hypothesis/
-
-# Translations
-pythonRainDrops/*.mo
-pythonRainDrops/*.pot
-
-# Django stuff:
-pythonRainDrops/*.log
-pythonRainDrops/local_settings.py
-
-# Flask stuff:
-pythonRainDrops/instance/
-pythonRainDrops/.webassets-cache
-
-# Scrapy stuff:
-pythonRainDrops/.scrapy
-
-# Sphinx documentation
-pythonRainDrops/docs/_build/
-
-# PyBuilder
-pythonRainDrops/target/
-
-# IPython Notebook
-pythonRainDrops/.ipynb_checkpoints
-
-# pyenv
-pythonRainDrops/.python-version
-
-# celery beat schedule file
-pythonRainDrops/celerybeat-schedule
-
-# dotenv
-pythonRainDrops/.env
-
-# virtualenv
-pythonRainDrops/venv/
-pythonRainDrops/ENV/
-
-# Spyder project settings
-pythonRainDrops/.spyderproject
-
-# Rope project settings
-pythonRainDrops/.ropeproject
+python/pythonRainDrops/htmlcov/
+python/pythonRainDrops/.tox/
+python/pythonRainDrops/.coverage
+python/pythonRainDrops/.coverage.*
+python/pythonRainDrops/.cache
+python/pythonRainDrops/nosetests.xml
+python/pythonRainDrops/coverage.xml
+python/pythonRainDrops/*.cover
+python/pythonRainDrops/.hypothesis/
+python/pythonRainDrops/*.mo
+python/pythonRainDrops/*.pot
+python/pythonRainDrops/*.log
+python/pythonRainDrops/local_settings.py
+python/pythonRainDrops/instance/
+python/pythonRainDrops/.webassets-cache
+python/pythonRainDrops/.scrapy
+python/pythonRainDrops/docs/_build/
+python/pythonRainDrops/target/
+python/pythonRainDrops/.ipynb_checkpoints
+python/pythonRainDrops/.python-version
+python/pythonRainDrops/celerybeat-schedule
+python/pythonRainDrops/.env
+python/pythonRainDrops/venv/
+python/pythonRainDrops/ENV/
+python/pythonRainDrops/.spyderproject
+python/pythonRainDrops/.ropeproject
 
 #------------------------------------
 #from the cSharpKoansSolution project
 #------------------------------------
-cSharpKoansSolution/CSharpKoans/bin
-cSharpKoansSolution/CSharpKoans/obj
-cSharpKoansSolution/CSharpKoans.Core/obj
-cSharpKoansSolution/CSharpKoans.Test/bin
-cSharpKoansSolution/CSharpKoans.Test/obj
-cSharpKoansSolution/*.suo
-cSharpKoansSolution/*.user
-cSharpKoansSolution/packages/**
+cSharp/cSharpKoansSolution/CSharpKoans/bin
+cSharp/cSharpKoansSolution/CSharpKoans/obj
+cSharp/cSharpKoansSolution/CSharpKoans.Core/obj
+cSharp/cSharpKoansSolution/CSharpKoans.Test/bin
+cSharp/cSharpKoansSolution/CSharpKoans.Test/obj
+cSharp/cSharpKoansSolution/*.suo
+cSharp/cSharpKoansSolution/*.user
+cSharp/cSharpKoansSolution/packages/**
 
 #------------------------------------
 #from the DotNetKoansSolution project
 #------------------------------------
 #from the DotNetKoansSolution project
-DotNetKoansSolution/*.suo
-DotNetKoansSolution/**/bin/**/*
-DotNetKoansSolution/**/obj/**/*
-DotNetKoansSolution/packages/**
+cSharp/DotNetKoansSolution/*.suo
+cSharp/DotNetKoansSolution/**/bin/**/*
+cSharp/DotNetKoansSolution/**/obj/**/*
+cSharp/DotNetKoansSolution/packages/**
