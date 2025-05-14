@@ -7,8 +7,10 @@ https://youtu.be/X48VuDVv0do?si=ciQiZ8ric9mCq64Z
 
 ### cluster deployment steps
 1. kind create cluster --config kind-config.yaml
-2. kubectl create nginx-depl --image=nginx
-3. kubectl create mongo-depl --image=mongo
+2. kubectl apply -f mongo-secret.yaml
+3. kubectl apply -f mongo-config.yaml
+4. kubectl apply -f mongo.yaml
+5. kubectl apply -f mongo-express.yaml
 
 ### kubectl discovery
 https://github.com/ChristianLempa/cheat-sheets/blob/main/tools/kubectl.md
@@ -20,8 +22,11 @@ https://github.com/ChristianLempa/cheat-sheets/blob/main/tools/kubectl.md
 5. kubectl exec -it <pod_name> -- /bin/bash
 6. kubectl describe pod <pod_name>
 7. kubectl apply -f <file_name.yaml>
+8. kubectl port-forward service/mongo-express-service 8081:8081
+9. open http://localhost:8081
 
 ### cluster delete
 1. kubectl delete -f <file_name.yaml>
 2. kubectl delete deployment <deployment_name>
-3. kind delete cluster
+3. kubectl delete all --all
+4. kind delete cluster
