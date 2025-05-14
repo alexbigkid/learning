@@ -1,7 +1,7 @@
 # Kubernetes crash course with Nana
 
 ## Youtube URL
-https://youtu.be/X48VuDVv0do?si=ciQiZ8ric9mCq64Z
+https://www.youtube.com/watch?v=X48VuDVv0do&list=PLJSyNCHeOq4b0QzjTbr1VALFnj0TbxuiE&index=35&t=4576s
 
 ## Commands
 
