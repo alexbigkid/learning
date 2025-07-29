@@ -1,0 +1,1 @@
+/usr/local/Cellar/exiftool/12.16/libexec/lib/Image/ExifTool.pm
