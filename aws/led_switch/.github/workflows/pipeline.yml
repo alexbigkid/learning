@@ -1,0 +1,24 @@
+name: abk.ledSwitch
+
+on:
+    push:
+        branches:
+            - master
+
+env:
+    ENV: dev
+
+jobs:
+    abkLedSwitch_dev:
+        name: Run on ubuntu-latest
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkingout repo
+              uses: actions/checkout@v2
+            - name: Agent Info
+              run: ./AgentInfo.sh
+            - name: Install Tools
+              run: ./InstallTools.sh
+            - name: Unit Test LED Switch
+              run: ./RunUnitTests.sh
