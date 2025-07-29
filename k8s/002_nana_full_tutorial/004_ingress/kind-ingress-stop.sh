@@ -59,6 +59,7 @@ UninstallIngressController() {
     return $LCL_EXIT_CODE
 }
 
+
 RemoveHelmRepo() {
     PrintTrace $TRACE_FUNCTION "\n-> ${FUNCNAME[0]}"
     if helm repo list | grep -q "$HELM_REPO_NAME"; then
@@ -70,6 +71,7 @@ RemoveHelmRepo() {
     PrintTrace $TRACE_FUNCTION "<- ${FUNCNAME[0]} (0)"
     return 0
 }
+
 
 #---------------------------
 # main
