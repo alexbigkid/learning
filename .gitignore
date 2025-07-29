@@ -145,3 +145,4 @@ cSharp/DotNetKoansSolution/*.suo
 cSharp/DotNetKoansSolution/**/bin/**/*
 cSharp/DotNetKoansSolution/**/obj/**/*
 cSharp/DotNetKoansSolution/packages/**
+.DS_Store
