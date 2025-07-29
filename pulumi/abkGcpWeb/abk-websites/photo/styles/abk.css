@@ -1,0 +1,275 @@
+/* ************************************************************************** */
+/* File: general.css */
+/* ************************************************************************** */
+/* Es folgen die Style-Definitionen, die Du aendern kannst.                   */
+/* Oberhalb jedes Befehls steht eine Kurzerklaerung                           */
+/* ************************************************************************** */
+
+/* Hintergrund allgemein */
+/* margin-top       = Abstand zwischen Fensterrand und Inhalt oben */
+/* margin-bottom    = Abstand zwischen Fensterrand und Inhalt unten */
+/* 10px             = 10 Pixel, Wert aenderbar */
+/* background-color = Hintergrundfarbe */
+/* #FFFFE0          = helles Gelb, Wert aenderbar */
+/* background-image = Hintergrundbild */
+/* in der url soll der Name der Grapfic relative  angegeben werden */
+/* -------------------------------------------------------------------------- */
+/* body { margin-top:10px; margin-bottom:10px; } */
+/* body { margin-top:10px; margin-bottom:10px; background-image:url(../images/back01.gif); } */
+/* body { margin-top:10px; margin-bottom:10px; background-color:#000000; } */
+/* body { margin-top:10px; margin-bottom:10px; background-color:#FFFFE2; } */
+/*body { margin-top:10px; margin-bottom:10px; background-color:#FAEBD7; }*/
+body { margin-top:10px; margin-bottom:10px; background-color:#000000; }
+/* body#home { margin-top:10px; margin-bottom:10px; background-color:#000000; } */
+
+/* Links einstellung allgemein */
+/* -------------------------------------------------------------------------- */
+/*a { color:#08C; }*/
+/* a { color:#777777; } */
+/*a:link, a:visited, a:active { text-decoration:none; color:#777777; }*/
+.a:hover { color:silver; text-decoration:underline; }
+/*a:visited { color:#772200; }*/
+/*a:visited { color:yellow; }*/
+/* a:visited { color:#772200; text-decoration:line-through; font-style:italic; } */
+
+
+/* Under construction image */
+/* -------------------------------------------------------------------------- */
+div.construct { background-image:url(../images/construct.gif); padding:200px; background-position:center center; background-repeat:no-repeat; }
+
+/* header */
+/*#header { width:1022px; height:40px; margin:18px auto; position:relative; z-index:900; }*/
+/*#header { width:885px; height:40px; margin:18px auto; position:relative; z-index:900; }*/
+#header { width:648px; height:40px; margin:18px auto; position:relative; z-index:900; }
+#header #tab { margin:0; padding:0; }
+#header #tab li { display:inline; }
+#header #tab li a { position:center; float:left; width:137px; height:0; padding-top:40px; overflow:hidden; text-align:center; position:relative; background-repeat:no-repeat; z-index:999; }
+/*#header #tab li a,*/
+
+/* tab buttons off state */
+/* -------------------------------------------------------------------------- */
+#header #tab li#t-abkphoto a { background-image:url(../images/001_t_abkphoto.png); background-position: 0 0; width:100px; }
+#header #tab li#t-portfolio a { background-image:url(../images/001_t_portfolio.png); background-position: -100 0; }
+#header #tab li#t-bio a { background-image:url(../images/001_t_bio.png); background-position: -237 0; }
+#header #tab li#t-contact a { background-image:url(../images/001_t_contact.png); background-position: -374 0; }
+#header #tab li#t-rates a { background-image:url(../images/001_t_rates.png); background-position: -511 0; }
+/*#header #tab li#t-home a { background-image:url(../images/001_t_home.png); background-position: -100 0; }*/
+/*#header #tab li#t-services a { background-image:url(../images/001_t_services.png); background-position: -511 0; }*/
+/*#header #tab li#t-settings a { background-image:url(../images/001_t_settings.png); background-position: -785 0; }
+/*#header #tab li#t-search a { background-image:url(../images/001_t_search.png); background-position: -922 0; width: 100px; }
+
+/* tab buttons mouse over states */
+/* -------------------------------------------------------------------------- */
+#header #tab li#t-abkphoto  a:hover { background-image:url(../images/001_t_abkphoto_mo.png); }
+#header #tab li#t-portfolio a:hover { background-image:url(../images/001_t_portfolio_mo.png); }
+#header #tab li#t-bio       a:hover { background-image:url(../images/001_t_bio_mo.png); }
+#header #tab li#t-contact   a:hover { background-image:url(../images/001_t_contact_mo.png); }
+#header #tab li#t-rates     a:hover { background-image:url(../images/001_t_rates_mo.png); }
+/*#header #tab li#t-home      a:hover { background-image:url(../images/001_t_home_mo.png); }*/
+/*#header #tab li#t-services  a:hover { background-image:url(../images/001_t_services_mo.png); }*/
+/*#header #tab li#t-settings  a:hover { background-image:url(../images/001_t_settings_mo.png); }*/
+/*#header #tab li#t-search    a:hover { background-image:url(../images/001_t_search_mo.png); }*/
+
+/* tab buttons clicked state */
+/* -------------------------------------------------------------------------- */
+#header #tab li#t-abkphoto  a:active { background-image:url(../images/001_t_abkphoto_c.png); }
+#header #tab li#t-portfolio a:active { background-image:url(../images/001_t_portfolio_c.png); }
+#header #tab li#t-bio       a:active { background-image:url(../images/001_t_bio_c.png); }
+#header #tab li#t-contact   a:active { background-image:url(../images/001_t_contact_c.png); }
+#header #tab li#t-rates     a:active { background-image:url(../images/001_t_rates_c.png); }
+/*#header #tab li#t-home      a:active { background-image:url(../images/001_t_home_c.png); }*/
+/*#header #tab li#t-services  a:active { background-image:url(../images/001_t_services_c.png); }*/
+/*#header #tab li#t-settings  a:active { background-image:url(../images/001_t_settings_c.png); }*/
+/*#header #tab li#t-search    a:active { background-image:url(../images/001_t_search_c.png); }*/
+
+/* tab buttons on states */
+/* -------------------------------------------------------------------------- */
+/*
+#header.abkphoto  #tab li#t-abkphoto  { background-image:url(../images/001_t_abkphoto_c.png);  background-position:    0 0; width:100px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.home      #tab li#t-home      { background-image:url(../images/001_t_home_c.png);      background-position: -100 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.portfolio #tab li#t-portfolio { background-image:url(../images/001_t_portfolio_c.png); background-position: -237 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.bio       #tab li#t-bio       { background-image:url(../images/001_t_bio_c.png);       background-position: -374 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.services  #tab li#t-services  { background-image:url(../images/001_t_services_c.png);  background-position: -511 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.contact   #tab li#t-contact   { background-image:url(../images/001_t_contact_c.png);   background-position: -648 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.settings  #tab li#t-settings  { background-image:url(../images/001_t_settings_c.png);  background-position: -785 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.search    #tab li#t-search    { background-image:url(../images/001_t_search_c.png);    background-position: -922 0; width:100px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+*/
+#header.abkphoto  #tab li#t-abkphoto  { background-image:url(../images/001_t_abkphoto_c.png);  background-position:    0 0; width:100px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.portfolio #tab li#t-portfolio { background-image:url(../images/001_t_portfolio_c.png); background-position: -100 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.bio       #tab li#t-bio       { background-image:url(../images/001_t_bio_c.png);       background-position: -237 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.contact   #tab li#t-contact   { background-image:url(../images/001_t_contact_c.png);   background-position: -374 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+#header.rates     #tab li#t-rates     { background-image:url(../images/001_t_rates_c.png);     background-position: -374 0; width:137px; height:0; text-align:center; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+
+
+
+/* portfolio-directory-horizontal images */
+#p-dir-h   { clear:both; width:932px; height:565px; margin-left:auto; margin-right:auto; margin-top=18; position:relative; z-index:900; }
+#p-dir-v   { clear:both; width:665px; height:832px; margin-left:auto; margin-right:auto; margin-top=18; position:relative; z-index:900; }
+#pdl1      { float:left; text-align:left; width:100px; display:block; margin:16px 0 0 0; padding:0; }
+#pdl1 li   { height=40px; display:block; }
+#pdl1 li a { position:center; float:left; width:100px; height:0px; padding-top:40px; overflow:hidden; text-align:left; position:relative; background-repeat:no-repeat; z-index:999; }
+/*#pdl1 li a,*/
+
+
+
+/* portfolio directory buttons */
+/* -------------------------------------------------------------------------- */
+#pdl1 li#p-01 a { background-image:url(../images/001_p1_art.png); }
+#pdl1 li#p-02 a { background-image:url(../images/001_p1_beauty.png); }
+#pdl1 li#p-03 a { background-image:url(../images/001_p1_city.png); }
+#pdl1 li#p-04 a { background-image:url(../images/001_p1_engagements.png); }
+#pdl1 li#p-05 a { background-image:url(../images/001_p1_fashion.png); }
+#pdl1 li#p-06 a { background-image:url(../images/001_p1_fun.png); }
+#pdl1 li#p-07 a { background-image:url(../images/001_p1_kids.png); }
+#pdl1 li#p-08 a { background-image:url(../images/001_p1_nature.png); }
+#pdl1 li#p-09 a { background-image:url(../images/001_p1_people.png); }
+#pdl1 li#p-10 a { background-image:url(../images/001_p1_weddings.png); }
+
+/* portfolio directory buttons mouse over states */
+/* -------------------------------------------------------------------------- */
+#pdl1 li#p-01 a:hover { background-image:url(../images/001_p1_art_mo.png); }
+#pdl1 li#p-02 a:hover { background-image:url(../images/001_p1_beauty_mo.png); }
+#pdl1 li#p-03 a:hover { background-image:url(../images/001_p1_city_mo.png); }
+#pdl1 li#p-04 a:hover { background-image:url(../images/001_p1_engagements_mo.png); }
+#pdl1 li#p-05 a:hover { background-image:url(../images/001_p1_fashion_mo.png); }
+#pdl1 li#p-06 a:hover { background-image:url(../images/001_p1_fun_mo.png); }
+#pdl1 li#p-07 a:hover { background-image:url(../images/001_p1_kids_mo.png); }
+#pdl1 li#p-08 a:hover { background-image:url(../images/001_p1_nature_mo.png); }
+#pdl1 li#p-09 a:hover { background-image:url(../images/001_p1_people_mo.png); }
+#pdl1 li#p-10 a:hover { background-image:url(../images/001_p1_weddings_mo.png); }
+
+/* portfolio directory buttons clicked state */
+/* -------------------------------------------------------------------------- */
+#pdl1 li#p-01 a:active { background-image:url(../images/001_p1_art_c.png); }
+#pdl1 li#p-02 a:active { background-image:url(../images/001_p1_beauty_c.png); }
+#pdl1 li#p-03 a:active { background-image:url(../images/001_p1_city_c.png); }
+#pdl1 li#p-04 a:active { background-image:url(../images/001_p1_engagements_c.png); }
+#pdl1 li#p-05 a:active { background-image:url(../images/001_p1_fashion_c.png); }
+#pdl1 li#p-06 a:active { background-image:url(../images/001_p1_fun_c.png); }
+#pdl1 li#p-07 a:active { background-image:url(../images/001_p1_kids_c.png); }
+#pdl1 li#p-08 a:active { background-image:url(../images/001_p1_nature_c.png); }
+#pdl1 li#p-09 a:active { background-image:url(../images/001_p1_people_c.png); }
+#pdl1 li#p-10 a:active { background-image:url(../images/001_p1_weddings_c.png); }
+
+/* portfolio directory buttons on states */
+/* -------------------------------------------------------------------------- */
+/*
+.p-01 #pdl1 li#p-01 { background-image:url(../images/001_p1_art_c.png);         background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-02 #pdl1 li#p-02 { background-image:url(../images/001_p1_beauty_c.png);      background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-03 #pdl1 li#p-03 { background-image:url(../images/001_p1_city_c.png);        background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-04 #pdl1 li#p-04 { background-image:url(../images/001_p1_engagements_c.png); background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-05 #pdl1 li#p-05 { background-image:url(../images/001_p1_fashion_c.png);     background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-06 #pdl1 li#p-06 { background-image:url(../images/001_p1_fun_c.png);         background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-07 #pdl1 li#p-07 { background-image:url(../images/001_p1_kids_c.png);        background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-08 #pdl1 li#p-08 { background-image:url(../images/001_p1_nature_c.png);      background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-09 #pdl1 li#p-09 { background-image:url(../images/001_p1_people_c.png);      background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-10 #pdl1 li#p-10 { background-image:url(../images/001_p1_weddings_c.png);    background-position: 0 0; width:100px; height:0; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+*/
+
+.p-01 #pdl1 li#p-01 { background-image:url(../images/001_p1_art_c.png);         width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-02 #pdl1 li#p-02 { background-image:url(../images/001_p1_beauty_c.png);      width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-03 #pdl1 li#p-03 { background-image:url(../images/001_p1_city_c.png);        width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-04 #pdl1 li#p-04 { background-image:url(../images/001_p1_engagements_c.png); width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-05 #pdl1 li#p-05 { background-image:url(../images/001_p1_fashion_c.png);     width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-06 #pdl1 li#p-06 { background-image:url(../images/001_p1_fun_c.png);         width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-07 #pdl1 li#p-07 { background-image:url(../images/001_p1_kids_c.png);        width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-08 #pdl1 li#p-08 { background-image:url(../images/001_p1_nature_c.png);      width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-09 #pdl1 li#p-09 { background-image:url(../images/001_p1_people_c.png);      width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+.p-10 #pdl1 li#p-10 { background-image:url(../images/001_p1_weddings_c.png);    width:100px; height:0; float:left; padding-top:40px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }
+
+/*#p-dir-h #oneiss.pdl1 { width:832px; height:565px; margin:0 0 0 137px; padding:0px; overflow:hidden; position:relative; background-repeat:no-repeat; z-index:999; }*/
+#p-dir-h #oneiss.pdl1 { width:832px; height:565px; margin:0 0 0 100px; padding:0px; }
+#p-dir-v #oneiss.pdl1 { width:565px; height:832px; margin:0 0 0 100px; padding:0px; }
+
+/* 1 image slide show. place it central */
+/* -------------------------------------------------------------------------- */
+#oneiss { margin:auto; text-align:center; }
+/*#oneiss,*/
+
+/* 1 image slide show. 640x480 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pix640     { width:672px; height:512px; margin:auto; }
+#oneiss #pix640 img { width:640px; height:480px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 im age slide show. 480x640 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pix480     { width:512px; height:672px; margin:auto; }
+#oneiss #pix480 img { width:480px; height:640px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 image slide show. 800x600 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pix800     { width:832px; height:632px; margin:auto; }
+#oneiss #pix800 img { width:800px; height:600px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 image slide show. 600x800 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pix600     { width:632px; height:832px; margin:auto; }
+#oneiss #pix600 img { width:600px; height:800px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 image slide show. 800x533 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pixs800     { width:832px; height:565px; margin:auto; }
+#oneiss #pixs800 img { width:800px; height:533px; padding:15px; border:1px solid #444; background-color:#222; -moz-border-radius:10px; -webkit-border-radius:10px; }
+/*#oneiss #pixs800     { width:832px; height:565px; margin:auto; }*/
+/*#oneiss #pixs800 img { width:800px; height:533px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }*/
+
+/* 1 image slide show. 533x800 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pixs533     { width:565px; height:832px; margin:auto; }
+#oneiss #pixs533 img { width:533px; height:800px; padding:15px; border:1px solid #444; background-color:#222; top:0; left:0; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 image slide show. 640x427 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pixs640     { width:672px; height:459px; margin:auto; }
+#oneiss #pixs640 img { width:640px; height:427px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+/* 1 image slide show. 427x640 images */
+/* -------------------------------------------------------------------------- */
+#oneiss #pixs427     { width:459px; height:672px; margin:auto; }
+#oneiss #pixs427 img { width:427px; height:640px; padding:15px; border:1px solid #444; background-color:#bbb; -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+table#portfolio              { border:1px groove silver; position:center; margin:auto; width:800px}
+table#portfolio th           { background-color:#4F4F4F; text-shadow:black 3px 2px 4px; color:gold; font-size:2em; }
+table#portfolio td#album img { width:400px; height:auto; }
+table#portfolio td#caption   { text-shadow:white 3px 2px 4px; color:LightYellow; text-align:center; }
+table#portfolio td#bold      { font-style:oblique; color:#777777; }
+
+table#bio          { border: 1px groove silver; position:center; margin:auto; width:800px }
+table#bio th       { background-color:#4F4F4F; text-shadow:black 3px 2px 4px; color:gold; font-size:1.5em; }
+table#bio td#bold  { font-style:oblique; color:#777777; }
+table#bio td#blue  { text-shadow:black 3px 2px 4px; color:blue; }
+table#bio td#norm  { 3px 2px 4px; color:#777777; }
+table#bio td#norm a:hover   { color: #FAEBD7; text-decoration: underline; }
+
+table#contact          { border: 1px groove silver; position:center; margin:auto; }
+table#contact th       { background-color:#4F4F4F; text-shadow:black 3px 2px 4px; color:gold; font-size:1.5em; }
+table#contact td#bold  { font-style:oblique; color:#777777; }
+table#contact td#blue  { text-shadow:black 3px 2px 4px; color:blue; }
+table#contact td#norm  { 3px 2px 4px; color:#777777; }
+table#contact td#norm a:hover   { color: #FAEBD7; text-decoration: underline; }
+
+table#rates           { border: 1px groove silver; border-collapse:collapse; position:center; margin:auto; }
+table#rates th        { border: 1px groove silver; background-color:#4F4F4F; text-shadow:black 3px 2px 4px; color:gold; font-size:1.5em; }
+table#rates th#bold   { border: 1px groove silver; text-shadow:black 3px 2px 4px; font-style:oblique; color:#777777; padding:3px; }
+table#rates td#bold   { border: 1px groove silver; font-style:oblique; color:#777777; padding:10px; }
+table#rates td#blue   { border: 1px groove silver; text-shadow:black 3px 2px 4px; color:blue; }
+table#rates td#norm   { border: 1px groove silver; 3px 2px 4px; color:#777777; padding:10px; }
+table#rates td#bold a:hover   { color:gold;    text-decoration:underline; }
+table#rates td#bold a:link    { color:#FAEBD7; text-decoration:underline; }
+table#rates td#bold a:visited { color:#777777; text-decoration:underline; }
+table#rates td#norm a:hover   { color:#FAEBD7; text-decoration:underline; }
+
+table#rates td#print   { border: 1px groove silver; 3px 2px 4px; color:#999999; padding:10px; }
+
+
+a img { border:none; }
+
+/*p#footer     { clear:both; font-size:1.2em; padding:0.4em; text-align:center; border-top:1px solid silver; margin-top:20px; margin-left:auto; margin-right:auto; text-shadow:gray 3px 2px 4px; color:purple; }*/
+/*p#footer     { clear:both; font-size:1.2em; padding:0.4em; text-align:center; margin-top:20px; margin-left:auto; margin-right:auto; text-shadow:black 3px 2px 4px; color:purple; }*/
+
+p#footer { font-family: Arial, Helvetica, sans-serif; font-size: 12px;	color: #777777;	text-align: center;	margin: 20px 36px 20px 0px;	}
+p#footer a:link    { color: #777777; text-decoration: none; }
+p#footer a:visited { color: #777777; text-decoration: none;	}
+p#footer a:hover   { color: #FAEBD7; text-decoration: underline; }
+/*p#footer     { clear:both; font-size:1.2em; padding:0.4em; text-align:center; margin-top:20px; margin-left:auto; margin-right:auto; text-shadow:#FAEBD7 3px 2px 4px; color:white; }*/
+p#footer img { vertical-align:text-bottom; }

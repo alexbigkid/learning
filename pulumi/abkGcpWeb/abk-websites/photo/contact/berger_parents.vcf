@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Berger;Parents;;;
+FN:Parents Berger
+EMAIL;type=INTERNET;type=pref:irma.und.peter@googlemail.com
+TEL;type=HOME;type=VOICE:+49 (9406) 958406
+TEL;type=CELL;type=VOICE:+49 (160) 9108 1239
+ADR;type=HOME;type=pref:;;Im Anger 59;Mintraching;Bavaria;93098;Germany
+IMPP;X-SERVICE-TYPE=GoogleTalk;type=pref:xmpp:irma.und.peter@googlemail.com
+IMPP;X-SERVICE-TYPE=Skype:skype:irma.und.peter
+END:VCARD
