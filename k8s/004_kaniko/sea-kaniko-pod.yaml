@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko
+spec:
+  containers:
+  - name: kaniko
+    image: gcr.io/kaniko-project/executor:debug
+    # image: gcr.io/kaniko-project/executor:latest
+    env:
+      - name: OS_IMAGE_VERSION
+        value: "24.04"
+      - name: OS_IMAGE_ARCH
+        value: "arm64v8"
+      - name: ENV_OS_IMAGE_VERSION
+        value: "24.04"
+      - name: ENV_OS_IMAGE_ARCH
+        value: "arm64v8"
+      - name: NODE_MAJOR
+        value: "20"
+      - name: BIN_VERSION
+        value: "1.5.0"
+    args: ["--dockerfile=/workspace/sea/docker/Dockerfile.ubuntu",
+            "--build-arg=OS_IMAGE_VERSION",
+            "--build-arg=OS_IMAGE_ARCH",
+            "--build-arg=ENV_OS_IMAGE_VERSION",
+            "--build-arg=ENV_OS_IMAGE_ARCH",
+            "--build-arg=NODE_MAJOR",
+            "--build-arg=BIN_VERSION",
+            "--context=dir://workspace/",
+            "--no-push",
+            "--custom-platform=linux/arm64"]
+    # command: ["/bin/sh", "-c", "sleep infinity"]
+    volumeMounts:
+      - name: sea-kaniko-workspace
+        mountPath: /workspace
+  restartPolicy: Never
+  volumes:
+    - name: sea-kaniko-workspace
+      persistentVolumeClaim:
+        claimName: sea-kaniko-pvc

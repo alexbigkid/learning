@@ -1,0 +1,51 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kaniko-job
+spec:
+  completions: $NUM_OF_PODS_TO_COMPLETE
+  parallelism: $NUM_OF_CONCURRENT_PODS
+  completionMode: Indexed
+  backoffLimit: 3
+  ttlSecondsAfterFinished: $JOB_TTL_SECONDS
+  template:
+    metadata:
+      labels:
+        app: kaniko
+    spec:
+      containers:
+      - name: kaniko
+        image: gcr.io/kaniko-project/executor:latest
+        command: ["sh", "-c"]
+        args:
+          - |
+            # Extract OS_VERSION and ARCH from ConfigMap
+            ITEM=$(head -n $(( ${HOSTNAME##*-} + 1 )) /config/combinations | tail -n 1)
+            OS_TYPE=$(echo $ITEM | cut -d '-' -f 1)
+            OS_VERSION=$(echo $ITEM | cut -d '-' -f 2)
+            OS_ARCH=$(echo $ITEM | cut -d '-' -f 3)
+
+            # Run Kaniko with extracted values
+            /kaniko/executor \
+                --dockerfile=/workspace/Dockerfile.$OS_TYPE \
+                --build-arg=OS_IMAGE_VERSION=$OS_VERSION \
+                --build-arg=OS_IMAGE_ARCH=$OS_ARCH \
+                --context=dir://workspace/ \
+                --no-push \
+                --custom-platform=linux/$OS_ARCH
+        volumeMounts:
+        - name: sea-kaniko-workspace
+          mountPath: /workspace
+        - name: sea-kaniko-config
+          mountPath: /config
+      restartPolicy: Never
+      volumes:
+      - name: sea-kaniko-workspace
+        persistentVolumeClaim:
+          claimName: sea-kaniko-pvc
+      - name: sea-kaniko-config
+        configMap:
+          name: sea-kaniko-config
+          items:
+          - key: combinations
+            path: combinations

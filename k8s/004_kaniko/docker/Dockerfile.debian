@@ -1,0 +1,72 @@
+ARG OS_IMAGE_VERSION
+ARG OS_IMAGE_ARCH
+FROM ${OS_IMAGE_ARCH}/debian:${OS_IMAGE_VERSION} AS builder
+
+
+# -----------------------------------------------------------------------------
+# Arguments and ENV variables
+# -----------------------------------------------------------------------------
+ARG NODE_MAJOR
+ENV ENV_NODE_MAJOR=${NODE_MAJOR}
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV AAI_HOME_DIR=/home/aai
+
+# -----------------------------------------------------------------------------
+# Check linux versions
+# -----------------------------------------------------------------------------
+    RUN echo "\n\nContent of /etc/os-release\n-----------------------" && \
+    cat /etc/os-release && \
+    echo "\n\nuname -a\n-----------------------" && \
+    uname -a
+
+# -----------------------------------------------------------------------------
+# Install needed tools
+# -----------------------------------------------------------------------------
+RUN echo "\n\nUpdating and installing deps ...\n-----------------------"&& \
+    apt-get update; apt-get upgrade -y && apt-get install -y \
+    ca-certificates \
+    curl \
+    gnupg \
+    jq
+
+# -----------------------------------------------------------------------------
+# Create working directory
+# -----------------------------------------------------------------------------
+RUN mkdir -p ${AAI_HOME_DIR}
+WORKDIR ${AAI_HOME_DIR}
+
+# -----------------------------------------------------------------------------
+# Install node
+# -----------------------------------------------------------------------------
+RUN echo "\n\nInstalling Node.js ...\n-----------------------" && \
+    mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$ENV_NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list && \
+    apt-get update && \
+    apt-get install -y nodejs && \
+    echo "nodejs version: $(nodejs -v)" && \
+    echo "npm version   : $(npm -v)"
+
+# -----------------------------------------------------------------------------
+# Build binaries and copy to bin directory
+# -----------------------------------------------------------------------------
+COPY ../../ .
+RUN echo "\n\nBuilding aai-agent binary ...\n-----------------------" && \
+    npm install --force && \
+    npm uninstall esbuild postject && \
+    npm install esbuild postject --save-dev && \
+    npm run build:bin
+
+
+# =============================================================================
+# 2nd stage to create a smaller size docker image
+# =============================================================================
+FROM ${OS_IMAGE_ARCH}/alpine:latest
+
+RUN mkdir -p /workspace/bin
+WORKDIR /workspace
+
+COPY --from=builder /home/aai/dist/aai-agent /workspace/bin/aai-agent
+
+CMD [ "/bin/sh" ]

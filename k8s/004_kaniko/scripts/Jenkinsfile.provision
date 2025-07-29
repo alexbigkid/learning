@@ -1,0 +1,53 @@
+def test_nodes = [
+    "main",
+    "rpi-3bp-test-0",
+    "rpi-4-test-0",
+    "nano-test-0",
+    "nano-test-1"
+    "xavier-nx-test-0",
+    "agx-xavier-test-0",
+    "voyager",
+]
+
+def generate_test_stage(node_name, mode, version) {
+    return {
+        stage("Perform provision ${node_name}") {
+            if (params.DEVICE != 'all' && params.DEVICE != "${node_name}") {
+                echo "Skipping on ${node_name}"
+                return
+            }
+            node(node_name) {
+                withCredentials([usernamePassword(
+                    credentialsId: 'b6909c00-f03c-42ad-b48b-896e93c9ffda',
+                    passwordVariable: 'ALWAYSAI_USER_PASSWORD',
+                    usernameVariable: 'ALWAYSAI_USER_EMAIL'
+                )]) {
+                    sh label: 'Install dependencies', script: "curl -fsSL https://artifacts.alwaysai.co/device-agent/install-device-agent.sh | sudo -E bash -"
+                    sh label: 'Provision device', script: "curl -fsSL https://artifacts.alwaysai.co/device-agent/provision-agent.sh | bash -s -- ${ALWAYSAI_USER_EMAIL} ${ALWAYSAI_USER_PASSWORD} build-cluster-${node_name}"
+                }
+            }
+        }
+    }
+}
+
+pipeline {
+    agent none
+    parameters {
+        choice(
+            name: 'DEVICE',
+            choices: ['all'] + test_nodes
+        )
+    }
+    stages {
+        stage('Provision devices') {
+            steps {
+                script {
+                    def test_node_map = test_nodes.collectEntries {
+                        ["${it}": generate_test_stage(it, mode, version)]
+                    }
+                    parallel test_node_map
+                }
+            }
+        }
+    }
+}

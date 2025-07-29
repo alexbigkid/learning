@@ -1,0 +1,8 @@
+{
+    "main": "dist/aai-agent.js",
+    "output": "dist/aai-agent.blob",
+    "bin": "dist/aai-agent",
+    "disableExperimentalSEAWarning": true,
+    "useSnapshot": false,
+    "useCodeCache": true
+}

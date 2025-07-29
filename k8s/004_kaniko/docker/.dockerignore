@@ -1,0 +1,9 @@
+.vscode/
+coverage/
+dist/
+docs/
+integration-tests/
+node_modules/
+secure-tunneling/
+tests/
+bin/
