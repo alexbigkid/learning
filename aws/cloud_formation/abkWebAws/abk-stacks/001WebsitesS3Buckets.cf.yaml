@@ -1,0 +1,55 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Create S3 buckets for websites."
+
+Parameters: 
+    Prefix:
+        Description: "Prefix for the naming."
+        Type: String
+    EnvironmentName:
+        Description: "Environment name to use."
+        Type: String
+        AllowedValues: [ "dev", "test", "prod" ]
+    DomainName:
+        Description: "Domain Name"
+        Type: String
+    SubDomainName:
+        Description: "Sub Domain name"
+        Type: String
+
+Conditions:
+    CreateProdResources:
+        Fn::Equals:
+          - !Ref EnvironmentName
+          - "prod"
+    CreateNotProdResources: !Not
+        - Fn::Equals:
+          - !Ref EnvironmentName
+          - "prod"
+    CreateDefaultResources:
+        Fn::Equals:
+          - !Ref SubDomainName
+          - "www"
+    CreateDefaultProdResources:
+        Fn::And:
+          - Condition: CreateProdResources
+          - Condition: CreateDefaultResources
+
+Resources: 
+    WebsitesS3Bucket:
+        Type: "AWS::S3::Bucket"
+        Condition: CreateNotProdResources
+        DeletionPolicy: Retain
+        Properties:
+            BucketName: !Sub "${SubDomainName}-${EnvironmentName}.${DomainName}.com"
+    WebsitesS3BucketProd:
+        Type: "AWS::S3::Bucket"
+        Condition: CreateProdResources
+        DeletionPolicy: Retain
+        Properties:
+            BucketName: !Sub "${SubDomainName}.${DomainName}.com"
+    WebsitesS3BucketDefaultProd:
+        Type: "AWS::S3::Bucket"
+        Condition: CreateDefaultProdResources
+        DeletionPolicy: Retain
+        Properties:
+            BucketName: !Sub "${DomainName}.com"

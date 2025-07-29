@@ -1,0 +1,32 @@
+# name: Build and Deploy
+
+# on:
+#     push:
+#         branches:
+#             - master
+
+# jobs:
+#     build:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: "Checkout"
+#               uses: actions/checkout@master
+
+#             - name: "Setup Node.js"
+#               uses: actions/setup-node@v1
+#               with:
+#                 node-version: 12.x
+
+#             - name: "npm install"
+#               run: npm install --production
+
+#             - name: "Login via Azure CLI"
+#               uses: Azure/login@v1
+#               with:
+#                 creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+#             - name: "Run Azure Functions Actions"
+#               uses: Azure/functions-actions@v1
+#               id: fa
+#               with:
+#                 app-name: triviaapidemo

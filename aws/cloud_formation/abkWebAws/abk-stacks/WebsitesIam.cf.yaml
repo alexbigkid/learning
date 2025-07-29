@@ -1,0 +1,97 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Group and policy definitions for Iam user to deploy web sites stacks"
+
+Parameters:
+    EnvironmentName:
+        Description: "Environment name to use."
+        Default: "dev"
+        Type: String
+        AllowedValues: [ "dev", "test", "prod" ]
+        ConstraintDescription: "must specify dev, test or prod."
+    Prefix:
+        Description: "Prefix for the naming."
+        Type: String
+    UserName:
+        Description: "User Name to create policy for."
+        Type: String
+    MasterStackName:
+        Description: "Master Stack Name for cloudformation deployment."
+        Type: String
+    DomainName:
+        Description: "Domain Name"
+        Type: String
+
+
+Conditions:
+    CreateProdResources:
+        Fn::Equals:
+          - !Ref EnvironmentName
+          - "prod"
+    CreateNotProdResources: !Not
+        - Fn::Equals:
+          - !Ref EnvironmentName
+          - "prod"
+
+
+Resources:
+
+    AbkCloudformationPolicy:
+        Type: AWS::IAM::Policy
+        Properties:
+            PolicyName: !Sub "${Prefix}-CloudformationPolicy-${EnvironmentName}"
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                  - Effect: Allow
+                    Action:
+                      - "cloudformation:*"
+                    Resource:
+                      - !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MasterStackName}-dunkel-${EnvironmentName}*"
+                      - !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MasterStackName}-photo-${EnvironmentName}*"
+                      - !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MasterStackName}-smarthome-${EnvironmentName}*"
+                      - !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MasterStackName}-www-${EnvironmentName}*"
+            Users:
+              - !Ref UserName
+
+    AbkS3Policy:
+        Type: AWS::IAM::Policy
+        Condition: CreateNotProdResources
+        Properties:
+            PolicyName: !Sub "${Prefix}-S3Policy-${EnvironmentName}"
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                  - Effect: Allow
+                    Action:
+                      - "S3:*"
+                    Resource:
+                      - !Sub "arn:aws:s3:::${Prefix}-stacks"
+                      - !Sub "arn:aws:s3:::${Prefix}-stacks/*"
+                      - !Sub "arn:aws:s3:::dunkel-${EnvironmentName}.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::photo-${EnvironmentName}.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::smarthome-${EnvironmentName}.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::www-${EnvironmentName}.${DomainName}.com"
+            Users:
+              - !Ref UserName
+
+    AbkS3ProdPolicy:
+        Type: AWS::IAM::Policy
+        Condition: CreateProdResources
+        Properties:
+            PolicyName: !Sub "${Prefix}-S3Policy-${EnvironmentName}"
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                  - Effect: Allow
+                    Action:
+                      - "S3:*"
+                    Resource:
+                      - !Sub "arn:aws:s3:::${Prefix}-stacks"
+                      - !Sub "arn:aws:s3:::${Prefix}-stacks/*"
+                      - !Sub "arn:aws:s3:::dunkel.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::photo.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::smarthome.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::www.${DomainName}.com"
+                      - !Sub "arn:aws:s3:::${DomainName}.com"
+            Users:
+              - !Ref UserName
