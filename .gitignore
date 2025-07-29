@@ -145,4 +145,14 @@ cSharp/DotNetKoansSolution/*.suo
 cSharp/DotNetKoansSolution/**/bin/**/*
 cSharp/DotNetKoansSolution/**/obj/**/*
 cSharp/DotNetKoansSolution/packages/**
+
+#------------------------------------
+# MacOS specific files
+#------------------------------------
 .DS_Store
+
+
+#------------------------------------
+# Python bytecode files
+#------------------------------------
+**/__pycache__/
